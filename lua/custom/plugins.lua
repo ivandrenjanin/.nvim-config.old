@@ -88,7 +88,11 @@ local plugins = {
         "prettier",
         "js-debug-adapter",
         "sqls",
-        "sql-formatter"
+        "sql-formatter",
+        "templ",
+        "htmx-lsp",
+        "html-lsp",
+        "tailwindcss-language-server"
       }
     }
   }

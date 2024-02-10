@@ -16,7 +16,9 @@ local opts = {
     null_ls.builtins.formatting.prettier,
     null_ls.builtins.diagnostics.eslint,
     -- sql
-    null_ls.builtins.formatting.sql_formatter.with { command = { "sleek" } }
+    null_ls.builtins.formatting.sql_formatter.with { command = { "sleek" } },
+    -- templ
+    null_ls.builtins.formatting.templ,
   },
   on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then
