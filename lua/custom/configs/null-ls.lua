@@ -19,6 +19,10 @@ local opts = {
     null_ls.builtins.formatting.sql_formatter.with { command = { "sleek" } },
     -- templ
     null_ls.builtins.formatting.templ,
+    -- python
+    null_ls.builtins.formatting.black,
+    null_ls.builtins.diagnostics.mypy,
+    null_ls.builtins.diagnostics.ruff,
   },
   on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then

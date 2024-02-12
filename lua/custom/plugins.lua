@@ -1,3 +1,5 @@
+vim.filetype.add({ extension = { templ = "templ" } })
+
 local plugins = {
   {
     "christoomey/vim-tmux-navigator",
@@ -92,7 +94,12 @@ local plugins = {
         "templ",
         "htmx-lsp",
         "html-lsp",
-        "tailwindcss-language-server"
+        "tailwindcss-language-server",
+        "black",
+        "debugpy",
+        "mypy",
+        "ruff",
+        "pyright",
       }
     }
   }

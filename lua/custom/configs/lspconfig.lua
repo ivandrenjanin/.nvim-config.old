@@ -45,7 +45,11 @@ lspconfig.templ.setup {
 }
 
 lspconfig.html.setup {
-  on_attach = on_attach,
+  on_attach = function(client, bufnr)
+    -- The document formatting implementation coming from a different package
+    client.server_capabilities.documentFormattingProvider = false
+    on_attach(client, bufnr)
+  end,
   capabilities = capabilities,
   filetypes = { "html", "templ" }
 }
@@ -61,6 +65,12 @@ lspconfig.tailwindcss.setup = {
   capabilities = capabilities,
   filetypes = { "templ", "astro", "javascript", "typescript", "react" },
   init_options = { userLanguages = { templ = "html" } },
+}
+
+lspconfig.pyright.setup = {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "python" },
 }
 
 lspconfig.gopls.setup {
