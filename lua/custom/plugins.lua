@@ -2,6 +2,16 @@ vim.filetype.add({ extension = { templ = "templ" } })
 
 local plugins = {
   {
+    "tamago324/lir.nvim",
+    dependencies = {
+      "kyazdani42/nvim-web-devicons"
+    },
+    config = function()
+      require "custom.configs.lir"
+      require("core.utils").load_mappings("lir")
+    end,
+  },
+  {
     "christoomey/vim-tmux-navigator",
     lazy = false,
   },

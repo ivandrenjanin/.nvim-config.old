@@ -1,5 +1,16 @@
 local M = {}
 
+M.lir = {
+  n = {
+    ["<leader>pv"] = {
+      function()
+        local lirFloat = require("lir.float")
+        lirFloat.toggle()
+      end
+    },
+  }
+}
+
 M.general = {
   n = {
     ["<C-h>"] = { "<cmd> TmuxNavigateLeft<CR>", "window left" },
