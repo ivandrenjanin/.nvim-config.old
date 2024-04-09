@@ -51,13 +51,13 @@ lspconfig.html.setup {
     on_attach(client, bufnr)
   end,
   capabilities = capabilities,
-  filetypes = { "html", "templ" }
+  filetypes = { "html", "templ", "handlebars" }
 }
 
 lspconfig.htmx.setup {
   on_attach = on_attach,
   capabilities = capabilities,
-  filetypes = { "html", "templ" },
+  filetypes = { "html", "templ", "handlebars" },
 }
 
 lspconfig.tailwindcss.setup = {
