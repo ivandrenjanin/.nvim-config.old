@@ -16,6 +16,9 @@ local opts = {
     null_ls.builtins.formatting.prettier,
     -- sql
     null_ls.builtins.formatting.sql_formatter.with { command = { "sleek" } },
+    -- yaml
+    null_ls.builtins.diagnostics.yamllint,
+    null_ls.builtins.formatting.yamlfix,
   },
   on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then
